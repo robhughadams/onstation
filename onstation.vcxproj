@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\onstation.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\onstation.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\onstation.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\onstation.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\onstation.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\onstation.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\onstation.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\onstation.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutBoxSummary.cpp" />
+    <ClCompile Include="aboutcopyrightpage.cpp" />
+    <ClCompile Include="AboutCreditsDialog.cpp" />
+    <ClCompile Include="AboutSheet.cpp" />
+    <ClCompile Include="AboutWeb.cpp" />
+    <ClCompile Include="AgeColorHelper.cpp" />
+    <ClCompile Include="agecolorpage.cpp" />
+    <ClCompile Include="BlunderDialog.cpp" />
+    <ClCompile Include="bookmark.cpp" />
+    <ClCompile Include="BookmarkDialog.cpp" />
+    <ClCompile Include="centerpage.cpp" />
+    <ClCompile Include="CenterStationNameDialog.cpp" />
+    <ClCompile Include="clipboard.CPP" />
+    <ClCompile Include="ColorSchemeComboBox.cpp" />
+    <ClCompile Include="ColorSheet.cpp" />
+    <ClCompile Include="colortool.CPP" />
+    <ClCompile Include="colorwidget.CPP" />
+    <ClCompile Include="comment.cpp" />
+    <ClCompile Include="compasswidget.CPP" />
+    <ClCompile Include="DebugStationLinksDialog.cpp" />
+    <ClCompile Include="DepthColorHelperDialog.cpp" />
+    <ClCompile Include="depthcolorpage.cpp" />
+    <ClCompile Include="DepthLevelDialog.cpp" />
+    <ClCompile Include="DistanceBetweenDialog.cpp" />
+    <ClCompile Include="editablegrid.cpp" />
+    <ClCompile Include="editfixedpointdialog.cpp" />
+    <ClCompile Include="filedump.cpp" />
+    <ClCompile Include="filehelper.cpp" />
+    <ClCompile Include="fixedpoint.cpp" />
+    <ClCompile Include="Folder.cpp" />
+    <ClCompile Include="folderinfodlg.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="gridctrl.cpp" />
+    <ClCompile Include="gworld.cpp" />
+    <ClCompile Include="gworldopengl.cpp" />
+    <ClCompile Include="Hitlist.cpp" />
+    <ClCompile Include="InfoByViewDialog.cpp" />
+    <ClCompile Include="jpclose.cpp" />
+    <ClCompile Include="junctionbox.cpp" />
+    <ClCompile Include="legeditorsettingspage.cpp" />
+    <ClCompile Include="legeditsheet.cpp" />
+    <ClCompile Include="leggridpage.cpp" />
+    <ClCompile Include="leginstrumentspage.cpp" />
+    <ClCompile Include="legpeoplepage.cpp" />
+    <ClCompile Include="legquery.cpp" />
+    <ClCompile Include="legsummarypage.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="mathstuff.CPP" />
+    <ClCompile Include="namelist.cpp" />
+    <ClCompile Include="newfolderdlg.CPP" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="nodepositioninfo.cpp" />
+    <ClCompile Include="Nodetree.cpp" />
+    <ClCompile Include="onstation.cpp" />
+    <ClCompile Include="onstationDoc.cpp" />
+    <ClCompile Include="OnStationSurveyTree.cpp" />
+    <ClCompile Include="onstationView.cpp" />
+    <ClCompile Include="OrphanedShotDialog.cpp" />
+    <ClCompile Include="OverallDataView.cpp" />
+    <ClCompile Include="PageLayoutPreferences.cpp" />
+    <ClCompile Include="PassageOptions.cpp" />
+    <ClCompile Include="pdate32.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="Preferences.cpp" />
+    <ClCompile Include="query.cpp" />
+    <ClCompile Include="realfolder.cpp" />
+    <ClCompile Include="Ruler.cpp" />
+    <ClCompile Include="saveformattedtext.cpp" />
+    <ClCompile Include="SearchCommentsDialog.cpp" />
+    <ClCompile Include="searchresultdlg.cpp" />
+    <ClCompile Include="SetExactViewSheet.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="surfacedata.cpp" />
+    <ClCompile Include="surfaceeditpage.cpp" />
+    <ClCompile Include="surfacepropertysheet.cpp" />
+    <ClCompile Include="surfacesizepage.cpp" />
+    <ClCompile Include="surveyleg.cpp" />
+    <ClCompile Include="SurveySearchDialog.cpp" />
+    <ClCompile Include="surveyshot.CPP" />
+    <ClCompile Include="TipDialog.cpp" />
+    <ClCompile Include="TitleBoxSetup.cpp" />
+    <ClCompile Include="Treehelper.cpp" />
+    <ClCompile Include="viewanglepage.CPP" />
+    <ClCompile Include="ViewScalePage.cpp" />
+    <ClCompile Include="Viewtab.cpp" />
+    <ClCompile Include="WaitForClosureDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="onstation.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlunderDialog.h" />
+    <ClInclude Include="DebugStationLinksDialog.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="onstation.h" />
+    <ClInclude Include="onstationDoc.h" />
+    <ClInclude Include="onstationView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Bitmap1.bmp" />
+    <CustomBuild Include="res\bitmappi.bmp" />
+    <CustomBuild Include="Bmfolder.bmp" />
+    <CustomBuild Include="bmp00008.bmp" />
+    <CustomBuild Include="res\bmp00008.bmp" />
+    <CustomBuild Include="cur00001.cur" />
+    <CustomBuild Include="res\cur00001.cur" />
+    <CustomBuild Include="Dragdrop.cur" />
+    <CustomBuild Include="res\Dragdrop.cur" />
+    <CustomBuild Include="res\help.cur" />
+    <CustomBuild Include="idr_onst.ico" />
+    <CustomBuild Include="res\idr_onst.ico" />
+    <CustomBuild Include="res\move4way.cur" />
+    <CustomBuild Include="res\nodrop.cur" />
+    <CustomBuild Include="res\onstation.ico" />
+    <CustomBuild Include="res\onstation.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="OnStationDoc.ico" />
+    <CustomBuild Include="res\onstationDoc.ico" />
+    <CustomBuild Include="res\sarrows.cur" />
+    <CustomBuild Include="res\splith.cur" />
+    <CustomBuild Include="res\splitv.cur" />
+    <CustomBuild Include="res\Titleima.bmp" />
+    <CustomBuild Include="Titleima.bmp" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="res\trck4way.cur" />
+    <CustomBuild Include="res\trcknesw.cur" />
+    <CustomBuild Include="res\trckns.cur" />
+    <CustomBuild Include="res\trcknwse.cur" />
+    <CustomBuild Include="res\trckwe.cur" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
