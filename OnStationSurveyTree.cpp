@@ -475,7 +475,7 @@ void COnStationSurveyTree::OnEndlabeledit(NMHDR* pNMHDR, LRESULT* pResult)
 		CFolder * pFolder=dynamic_cast<CFolder *>(pObject);
 		if (pFolder!=NULL)
 		{
-			CString CS=SetItemText(pTVDispInfo->item.hItem,pTVDispInfo->item.pszText);
+			BOOL CS=SetItemText(pTVDispInfo->item.hItem,pTVDispInfo->item.pszText);
 			pFolder->SetName(pTVDispInfo->item.pszText);
 		}
 	}
